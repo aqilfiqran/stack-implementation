@@ -45,16 +45,24 @@ public class Stack<Tipe> {
         }
     }
 
-    public boolean pop() {
+    public boolean isEmpty() {
+        if (this.Size() == 0)
+            return true;
+        return false;
+    }
+
+    public String pop() {
         Node<Tipe> current = this.getHead();
         if (this.Size() == 0)
-            return false;
+            return "";
         else if (current.getNext() != null)
             this.setHead(current.getNext());
-        else
+        else {
             current.setNull();
+            return "";
+        }
         this.decSize();
-        return true;
+        return this.getHead().getData().toString();
     }
 
 }

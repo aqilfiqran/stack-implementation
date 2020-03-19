@@ -11,10 +11,14 @@ public class Main {
     public static void main(String a[]) {
         Stack<String> ll = new Stack<String>();
 
-        ll.push(new Data<String>("tes"));
-        ll.push(new Data<String>("tes2"));
-        ll.push(new Data<String>("tes3"));
-        ll.pop();
+        ll.push(new Data<String>("t"));
+        ll.push(new Data<String>("e"));
+        ll.push(new Data<String>("s"));
+        String tes = ll.pop();
+        if (!ll.isEmpty()) {
+            System.out.println("tidak kosong");
+        }
+        System.out.println(tes);
         ll.display();
     }
 }
