@@ -11,7 +11,6 @@ public class Stack<Tipe> {
 
     public void setHead(Node<Tipe> head) {
         this.head = head;
-        this.incSize();
     }
 
     public void incSize() {
@@ -32,6 +31,7 @@ public class Stack<Tipe> {
 
     public void push(Data<Tipe> data) {
         this.setHead(new Node<Tipe>(data, this.getHead()));
+        this.incSize();
     }
 
     public void display() {
